@@ -25,9 +25,12 @@ async def on_message(message):
 
     user_input = message.content.strip()
 
-    # Optional: Command prefix check (e.g., only respond if starts with !rin)
-    # if not user_input.startswith("!rin"):
-    #     return
+    # Only respond if message starts with "!rin"
+    if not user_input.lower().startswith("!rin"):
+        return
+
+    # Remove the "!rin" prefix before sending to the Flask backend
+    user_input = user_input[len("!rin"):].strip()
 
     try:
         # Send to Flask backend
