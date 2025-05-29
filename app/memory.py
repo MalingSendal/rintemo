@@ -8,6 +8,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
+MEMORY_FILE = "interaction_memory.json"
 MEMORY_CSV = "chat_memory.csv"
 MEMORY_JSON = "memory_embeddings.json"
 MEMORY_THRESHOLD = 0.5
@@ -15,6 +16,29 @@ MEMORY_THRESHOLD = 0.5
 memory_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 class LongTermMemory:
+    @staticmethod
+    def get_last_interaction_time(user_id):
+        if os.path.exists(MEMORY_FILE):
+            with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+                memory = json.load(f)
+                return memory.get(user_id, {}).get("last_interaction")
+        return None
+
+    @staticmethod
+    def update_last_interaction_time(user_id):
+        memory = {}
+        if os.path.exists(MEMORY_FILE):
+            with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+                memory = json.load(f)
+
+        if user_id not in memory:
+            memory[user_id] = {}
+
+        memory[user_id]["last_interaction"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        with open(MEMORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(memory, f, indent=2)
+
     @staticmethod
     def init_memory():
         if not os.path.exists(MEMORY_CSV):

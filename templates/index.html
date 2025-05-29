@@ -111,6 +111,11 @@
         </div>
     </div>
 
+    <audio id="voiceResponse" controls>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         // Scroll to bottom on page load
         window.onload = function() {
@@ -178,6 +183,22 @@
             chatMessages.appendChild(messageContainer);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
+
+        function playVoice(responseFile) {
+            const audio = document.getElementById('voiceResponse');
+            audio.src = responseFile;
+            audio.play();
+        }
+
+        // Example usage after receiving the response
+        fetch('/chat', { method: 'POST', body: formData })
+            .then(response => response.json())
+            .then(data => {
+                if (data.voice_file) {
+                    playVoice(data.voice_file);
+                }
+            });
+
     </script>
 </body>
 </html>

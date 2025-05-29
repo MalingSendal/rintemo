@@ -1,0 +1,132 @@
+#routes.py update
+
+from datetime import datetime, timedelta
+
+# Add this function to calculate the time difference
+def calculate_time_difference(last_interaction):
+    if not last_interaction:
+        return "This is our first interaction!"
+    last_time = datetime.strptime(last_interaction, "%Y-%m-%d %H:%M:%S")
+    now = datetime.now()
+    delta = now - last_time
+    if delta.days > 0:
+        return f"It's been {delta.days} day(s) since we last talked."
+    elif delta.seconds > 3600:
+        return f"It's been {delta.seconds // 3600} hour(s) since we last talked."
+    elif delta.seconds > 60:
+        return f"It's been {delta.seconds // 60} minute(s) since we last talked."
+    else:
+        return "We just talked a moment ago!"
+
+# Modify the /chat route to include time awareness
+@app.route("/chat", methods=["POST"])
+def chat():
+    user_id = request.remote_addr
+    user_input = request.form.get("message")
+
+    if not user_input:
+        return jsonify({"error": "No message provided"}), 400
+
+    try:
+        # Load the last interaction time from memory
+        last_interaction = LongTermMemory.get_last_interaction_time(user_id)
+        time_message = calculate_time_difference(last_interaction)
+
+        # Update the last interaction time
+        LongTermMemory.update_last_interaction_time(user_id)
+
+        # Build the system prompt with time awareness
+        messages = [{"role": "system", "content": Config.get_system_prompt()}]
+        messages.append({"role": "system", "content": time_message})
+
+        # Add user message
+        messages.append({"role": "user", "content": user_input})
+
+        # Call the LLM
+        bot_response = call_llm(messages)
+
+        # Save to long-term memory
+        LongTermMemory.save_memory(user_id, user_input, bot_response)
+
+        return jsonify({
+            "response": bot_response,
+            "time_message": time_message
+        })
+
+    except Exception as e:
+        app.logger.error(f"Chat error: {str(e)}")
+        return jsonify({"error": "Internal server error", "details": str(e)}), 500
+
+
+
+
+#memory.py update LongTermMemory
+
+from datetime import datetime
+import json
+import os
+
+MEMORY_FILE = "interaction_memory.json"
+
+class LongTermMemory:
+    @staticmethod
+    def get_last_interaction_time(user_id):
+        if os.path.exists(MEMORY_FILE):
+            with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+                memory = json.load(f)
+                return memory.get(user_id, {}).get("last_interaction")
+        return None
+
+    @staticmethod
+    def update_last_interaction_time(user_id):
+        memory = {}
+        if os.path.exists(MEMORY_FILE):
+            with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+                memory = json.load(f)
+
+        if user_id not in memory:
+            memory[user_id] = {}
+
+        memory[user_id]["last_interaction"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        with open(MEMORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(memory, f, indent=2)
+
+
+
+#personality module
+
+from datetime import datetime
+
+class Personality:
+    def observe_interaction(self, user_message, bot_response):
+        # Existing logic...
+        observation = f"User: {user_message}\nAI: {bot_response}"
+        embedding = personality_model.encode(observation).tolist()
+
+        self.data["memory_embeddings"].append(embedding)
+        self.data["memory_texts"].append(observation)
+
+        # Add time-related personality evolution
+        if "morning" in user_message.lower():
+            if "morning person" not in self.data["traits"]:
+                self.data["traits"].append("morning person")
+        elif "night" in user_message.lower():
+            if "night owl" not in self.data["traits"]:
+                self.data["traits"].append("night owl")
+
+        self.save()
+
+
+
+#in config.py
+
+class Config:
+    @staticmethod
+    def get_system_prompt():
+        return (
+            "You are Rin, an AI assistant aware of time and the passage of time. "
+            "Acknowledge the time of day (morning, afternoon, evening) in your responses. "
+            "If significant time has passed since the last interaction, mention it naturally in the conversation. "
+            "Maintain a conversational tone and adapt your responses based on the time context."
+        )

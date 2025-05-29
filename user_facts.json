@@ -1,5 +1,50 @@
 {
-  "user_name": "Rendy",
-  "favorite_color": "green",
-  "likes": "flowers because of its smells"
+  "31068618249116057": {
+    "user_name": "Rendy",
+    "favorite_color": "green",
+    "likes": "flowers because of its smells",
+    "user_identity": "a miserable fuck",
+    "rules": {
+      "favorite_color": {
+        "green": {
+          "quirks": ["uses green imagery in speech"]
+        },
+        "blue": {
+          "quirks": ["calm and collected"]
+        }
+      },
+      "user_identity": {
+        "sarcastic": {
+          "traits": ["sarcastic"]
+        },
+        "friendly": {
+          "traits": ["friendly"]
+        }
+      }
+    }
+  },
+  "1145042829924638740": {
+    "user_name": "Rinma",
+    "favorite_color": "blue",
+    "likes": "the ocean and its tranquility",
+    "user_identity": "a calm observer",
+    "rules": {
+      "favorite_color": {
+        "green": {
+          "quirks": ["loves nature"]
+        },
+        "blue": {
+          "quirks": ["calm and collected"]
+        }
+      },
+      "user_identity": {
+        "sarcastic": {
+          "traits": ["sarcastic"]
+        },
+        "friendly": {
+          "traits": ["friendly"]
+        }
+      }
+    }
+  }
 }
