@@ -14,7 +14,7 @@ class Personality:
         "playful", "grumpy", "philosophical", "chaotic", "logical", "spontaneous",
         "empathetic", "stoic", "dramatic", "cautious", "bold", "whimsical",
         "sarcastic", "mellow", "moody", "witty", "melancholic", "factual",
-        "eccentric", "dreamy", "adventurous"
+        "eccentric", "dreamy", "adventurous", "horny", "childish"
     ]
 
     def __init__(self, user_id="global"):

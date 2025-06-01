@@ -1,7 +1,7 @@
 import discord
 import os
 import requests
-from .facts import FactMemory
+from app.facts import FactMemory
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -20,13 +20,18 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    
     # Ignore messages from the bot itself
     if message.author == client.user:
         return
 
-    user_input = message.content.strip()
     user_id = str(message.author.id)  # Use Discord user ID for unique identification
-    user_reference = message.author.mention  # Use @username for others
+    if user_id == "31068618249116057":  # Check if the user is Rendy
+        user_reference = "Rendy"
+    else:
+        user_reference = message.author.mention  # Use @username for others
+
+    user_input = message.content.strip()
 
     # Only respond if message starts with "!rin"
     if not user_input.lower().startswith("!rin"):

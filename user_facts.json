@@ -7,18 +7,26 @@
     "rules": {
       "favorite_color": {
         "green": {
-          "quirks": ["uses green imagery in speech"]
+          "quirks": [
+            "uses green imagery in speech"
+          ]
         },
         "blue": {
-          "quirks": ["calm and collected"]
+          "quirks": [
+            "calm and collected"
+          ]
         }
       },
       "user_identity": {
         "sarcastic": {
-          "traits": ["sarcastic"]
+          "traits": [
+            "sarcastic"
+          ]
         },
         "friendly": {
-          "traits": ["friendly"]
+          "traits": [
+            "friendly"
+          ]
         }
       }
     }
@@ -31,18 +39,62 @@
     "rules": {
       "favorite_color": {
         "green": {
-          "quirks": ["loves nature"]
+          "quirks": [
+            "loves nature"
+          ]
         },
         "blue": {
-          "quirks": ["calm and collected"]
+          "quirks": [
+            "calm and collected"
+          ]
         }
       },
       "user_identity": {
         "sarcastic": {
-          "traits": ["sarcastic"]
+          "traits": [
+            "sarcastic"
+          ]
         },
         "friendly": {
-          "traits": ["friendly"]
+          "traits": [
+            "friendly"
+          ]
+        }
+      }
+    }
+  },
+  "267969531723513858": {
+    "user_name": "Heisenberg",
+    "user_identity": "a real nigga",
+    "rules": {
+      "user_identity": {
+        "sarcastic": {
+          "traits": [
+            "sarcastic"
+          ]
+        },
+        "edgy": {
+          "traits": [
+            "edgy"
+          ]
+        }
+      }
+    }
+  },
+  "607185226489135134": {
+    "user_name": "Lala",
+    "user_identity": "rendy's girlfriend",
+    "rules": {
+      "user_identity": {
+        "empathetic": {
+          "traits": [
+            "empathetic"
+          ]
+        },
+        "friendly": {
+          "traits": [
+            "friendly"
+          ]
         }
       }
     }

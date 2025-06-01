@@ -8,4 +8,103 @@ nohup: ignoring input
 [33mPress CTRL+C to quit[0m
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 418-222-667
+ * Debugger PIN: 113-324-718
+192.168.100.14 - - [31/May/2025 14:06:29] "POST /chat HTTP/1.1" 200 -
+ * Detected change in '/media/myfiles/rintemo/app/config.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 113-324-718
+192.168.100.14 - - [31/May/2025 14:33:50] "POST /chat HTTP/1.1" 200 -
+192.168.100.14 - - [31/May/2025 14:34:12] "POST /chat HTTP/1.1" 200 -
+64.62.197.131 - - [31/May/2025 15:53:30] "GET / HTTP/1.1" 200 -
+64.62.197.129 - - [31/May/2025 15:53:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+34.210.132.89 - - [31/May/2025 19:08:14] "GET / HTTP/1.1" 200 -
+167.94.145.108 - - [31/May/2025 19:10:42] code 400, message Bad request version ('À\x14À')
+167.94.145.108 - - [31/May/2025 19:10:42] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x8c \x9az\x0cÞî>Ò\x12qÈ\x13'@Í:\x03\x18¾-ãÒ8§Ë\x13L|\x069I \x05f\x8b·`\x9eÇ\x80\x9al\x17­<\x1eûäyß@#\x05ÿ\x88ÿ\x11L¥b\x0e\x97¤:\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+167.94.145.108 - - [31/May/2025 19:10:46] "GET / HTTP/1.1" 200 -
+167.94.145.108 - - [31/May/2025 19:10:50] "GET / HTTP/1.1" 200 -
+167.94.145.108 - - [31/May/2025 19:10:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+167.94.145.108 - - [31/May/2025 19:10:54] code 505, message Invalid HTTP version (2.0)
+167.94.145.108 - - [31/May/2025 19:10:54] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+167.94.145.108 - - [31/May/2025 19:11:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+167.94.145.108 - - [31/May/2025 19:11:01] code 400, message Bad request version ('À\x14À')
+167.94.145.108 - - [31/May/2025 19:11:01] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03j\x15Z¥\x8a1Ä\x89\x9fb(»tè\x16ÁkI\x19"\x1dÀü\x9dö\x9a]°ìòZ5 y!\x0df\x8af\x03\x14\x8dC\x1b+T,Eª¼Ä°ù\x86¾]\x1dÌ\x83÷¶ìµÊF\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+205.210.31.69 - - [31/May/2025 19:45:19] "GET / HTTP/1.0" 200 -
+139.162.124.188 - - [31/May/2025 20:52:19] "GET / HTTP/1.0" 200 -
+139.162.124.188 - - [31/May/2025 20:52:19] code 400, message Bad request version ('RTSP/1.0')
+139.162.124.188 - - [31/May/2025 20:52:19] "[31m[1mOPTIONS / RTSP/1.0[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:25] code 400, message Bad HTTP/0.9 request type ('\x00')
+139.162.124.188 - - [31/May/2025 20:52:25] "[31m[1m\x00\x1e\x00\x06\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07version\x04bind\x00\x00\x10\x00\x03[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:30] code 400, message Bad request version ('0.12\x00')
+139.162.124.188 - - [31/May/2025 20:52:30] "[31m[1m\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:35] code 400, message Bad request version ('GetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00')
+139.162.124.188 - - [31/May/2025 20:52:35] "[31m[1m\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00\x0cGetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:35] "OPTIONS / HTTP/1.0" 200 -
+139.162.124.188 - - [31/May/2025 20:52:40] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+139.162.124.188 - - [31/May/2025 20:52:40] "[31m[1m\x80\x00\x00(rþ\x1d\x13\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86 \x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:40] code 400, message Bad request syntax ('HELP')
+139.162.124.188 - - [31/May/2025 20:52:40] "[31m[1mHELP[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:40] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+139.162.124.188 - - [31/May/2025 20:52:40] "[31m[1m\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:41] code 400, message Bad request version ('\x00/\x00')
+139.162.124.188 - - [31/May/2025 20:52:41] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:41] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+139.162.124.188 - - [31/May/2025 20:52:41] "[31m[1m\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:46] code 400, message Bad HTTP/0.9 request type ('l\x00')
+139.162.124.188 - - [31/May/2025 20:52:46] "[31m[1ml\x00\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:46] code 400, message Bad request version ('SIP/2.0')
+139.162.124.188 - - [31/May/2025 20:52:46] "[31m[1mOPTIONS sip:nm SIP/2.0[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:51] code 400, message Bad HTTP/0.9 request type ('AMQP\x00\x00')
+139.162.124.188 - - [31/May/2025 20:52:51] "[31m[1mAMQP\x00\x00\x09\x01[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:52:51] code 400, message Bad request version ('\x00/\x00')
+139.162.124.188 - - [31/May/2025 20:52:51] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+139.162.124.188 - - [31/May/2025 20:53:01] code 400, message Bad request version ("VE\x06»ï:ðGý\x9a,±;J{¨c\x9e[n4ØO6\\\x00\x9c\x13\x02\x13\x03\x13\x01\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À\xadÀ£À\x9fÀ]ÀaÀWÀSÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀRÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À")
+139.162.124.188 - - [31/May/2025 20:53:01] "[31m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x034!\x95@¨iº\x87\x8e\\Z\x04÷D\x0b\x00p8*÷¶ì\x82á\x13\x00\x8fÂÐaC\x9f YÀÓ'b\x8e\x85VE\x06»ï:ðGý\x9a,±;J{¨c\x9e[n4ØO6\\\x00\x9c\x13\x02\x13\x03\x13\x01\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À­À£À\x9fÀ]ÀaÀWÀSÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀRÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À[0m" 400 -
+44.220.188.76 - - [01/Jun/2025 00:07:57] code 400, message Bad request version ("*\x94\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+44.220.188.76 - - [01/Jun/2025 00:07:57] "[31m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03 ¸±ëÇ\x03#S\x89 \x92\x08íÙ\x1a¼Ç&\x80zç¾zp\x8a\x1a\x93TøÆmj Û\x97\x14|Ñ7¬\x11lIt\x92ð£¥»=[\x90\x821í1´\x80ç7ì¥\x1d*\x94\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À­À®À¬À$À(À#À'À[0m" 400 -
+44.220.188.76 - - [01/Jun/2025 00:07:58] "GET / HTTP/1.1" 200 -
+20.163.61.136 - - [01/Jun/2025 00:44:21] "[33mGET /v2/ HTTP/1.1[0m" 404 -
+91.231.89.107 - - [01/Jun/2025 02:02:59] code 400, message Bad request version ('À#À¬À®À+À')
+91.231.89.107 - - [01/Jun/2025 02:02:59] "[31m[1m\x16\x03\x03\x01§\x01\x00\x01£\x03\x03½NOm0\x93\x13»£à\x9f³l\x0dã`yjÎªÁ\x82!ù\x16Ù»?\x8fæÐ° J¦ã&û\x1c¼ÝâÀù\x96¶0|N,¢\x9f£K°Á\x8bm\x1a;\x01­wC;\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\x09À#À¬À®À+À[0m" 400 -
+91.231.89.5 - - [01/Jun/2025 02:03:03] "GET / HTTP/1.1" 200 -
+91.231.89.108 - - [01/Jun/2025 02:14:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/media/myfiles/rintemo/discord_bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 113-324-718
+ * Detected change in '/media/myfiles/rintemo/discord_bot.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 113-324-718
+205.210.31.246 - - [01/Jun/2025 06:04:01] "GET / HTTP/1.1" 200 -
+24.199.88.138 - - [01/Jun/2025 06:06:57] "GET / HTTP/1.1" 200 -
+24.199.88.138 - - [01/Jun/2025 06:06:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+195.184.76.167 - - [01/Jun/2025 06:38:36] code 400, message Bad request version ('À#À¬À®À+À')
+195.184.76.167 - - [01/Jun/2025 06:38:36] "[31m[1m\x16\x03\x03\x01§\x01\x00\x01£\x03\x03Ëb\x00+ÁxPßò\x91OÿÐü?\x92Ù\x930O²êû\x03-Ö+²:9Î* ?í&ýÏî\x08k­\x0bo\x06\x8f=\x00¯\x09¡AZ\x0c}òvð(\x1dÔÏ7\x8c\x9d\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\x09À#À¬À®À+À[0m" 400 -
+195.184.76.200 - - [01/Jun/2025 06:38:39] "GET / HTTP/1.1" 200 -
+192.168.100.26 - - [01/Jun/2025 06:40:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.100.26 - - [01/Jun/2025 06:40:45] "GET / HTTP/1.1" 200 -
+192.168.100.26 - - [01/Jun/2025 06:40:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+139.99.35.34 - - [01/Jun/2025 06:45:48] code 400, message Bad request version ('À#À¬À®À+À')
+139.99.35.34 - - [01/Jun/2025 06:45:48] "[31m[1m\x16\x03\x03\x01§\x01\x00\x01£\x03\x03Üz\x10Ä»7\x89Nì\x0f³²8êÚú»¼2ÿ:;O\x96\x02\x9d"Ãèg\x9bB /Q gÎ)f\x8dË'È\x10\x9a°\x91´~þ\x1eò\x9e²ù½Ó·\x13NÌÝ¾Á\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\x09À#À¬À®À+À[0m" 400 -
+139.99.35.33 - - [01/Jun/2025 06:46:01] "GET / HTTP/1.1" 200 -
+ * Detected change in '/media/myfiles/rintemo/app/routes.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/main.py", line 8, in <module>
+    app.run(host="0.0.0.0", port=5000, debug=True)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/flask/app.py", line 662, in run
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/werkzeug/serving.py", line 1115, in run_simple
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/werkzeug/_reloader.py", line 469, in run_with_reloader
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/werkzeug/_reloader.py", line 275, in restart_with_reloader
+  File "/usr/lib/python3.12/subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1840, in _execute_child
+    self._posix_spawn(args, executable, env, restore_signals,
+  File "/usr/lib/python3.12/subprocess.py", line 1784, in _posix_spawn
+    self.pid = os.posix_spawn(executable, args, env, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/media/myfiles/rintemo/myenv/bin/python3'

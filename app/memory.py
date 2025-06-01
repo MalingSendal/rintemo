@@ -5,6 +5,7 @@ import csv
 import json
 from datetime import datetime
 import numpy as np
+from pytz import timezone
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -26,6 +27,7 @@ class LongTermMemory:
 
     @staticmethod
     def update_last_interaction_time(user_id):
+        jakarta_tz = timezone("Asia/Jakarta")
         memory = {}
         if os.path.exists(MEMORY_FILE):
             with open(MEMORY_FILE, "r", encoding="utf-8") as f:
@@ -34,7 +36,8 @@ class LongTermMemory:
         if user_id not in memory:
             memory[user_id] = {}
 
-        memory[user_id]["last_interaction"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Save the current time in Jakarta timezone
+        memory[user_id]["last_interaction"] = datetime.now(jakarta_tz).strftime("%Y-%m-%d %H:%M:%S")
 
         with open(MEMORY_FILE, "w", encoding="utf-8") as f:
             json.dump(memory, f, indent=2)

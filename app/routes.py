@@ -7,12 +7,16 @@ from .facts import FactMemory
 from .llm_client import call_llm
 from .config import Config
 from .personality import Personality
+import pytz
 import pyttsx3
 import csv
 import os
 
 
 def calculate_time_difference(last_interaction):
+    jakarta_tz = pytz.timezone("Asia/Jakarta")
+    now = datetime.now(jakarta_tz)
+
     if not last_interaction:
         return "This is our first interaction!"
     last_time = datetime.strptime(last_interaction, "%Y-%m-%d %H:%M:%S")
@@ -92,6 +96,11 @@ def register_routes(app):
             else:
                 facts_text = f"I don't know much about {user_reference} yet."
 
+            if not user_facts:
+                user_reference = request.form.get("user_reference", "Unknown User")
+            else:
+                user_reference = user_facts.get("user_name", request.form.get("user_reference", "Unknown User"))
+
             # Prepare system messages
             messages = [{"role": "system", "content": Config.get_system_prompt()}]
             messages.append({"role": "system", "content": f"Facts about {user_reference}: {facts_text}"})
@@ -99,7 +108,7 @@ def register_routes(app):
             # Extract and save user-specific facts
             new_facts = FactMemory.extract_facts_from_message(user_input)
             for key, value in new_facts.items():
-                FactMemory.save_fact(f"{user_id}_{key}", value)  # Prefix facts with user_id for uniqueness
+                FactMemory.save_user_fact(user_id, key, value)  # Correct method
 
             # Add facts to system messages
             messages.append({"role": "system", "content": f"Facts about {user_reference}: {facts_text}"})
