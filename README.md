@@ -65,8 +65,8 @@
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/rinai.git
-cd rinai
+git clone https://github.com/MalingSendal/rintemo.git
+cd rintemo
 ```
 
 ### 2. Install Dependencies
