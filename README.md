@@ -85,6 +85,7 @@ Create a `.env` file with your Discord token and DeepSeek API:
 ```
 DEEPSEEK_API_KEY=your_API_here
 DISCORD_TOKEN=your_discord_token_here
+AI_NAME=Rin
 ```
 
 ### 4. Run the Web App
