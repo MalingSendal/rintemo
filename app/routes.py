@@ -1,17 +1,23 @@
 #routes.py
 
 from datetime import datetime
-from flask import request, jsonify, render_template
+from flask import request, jsonify, render_template, send_file
 from .memory import LongTermMemory
 from .facts import FactMemory
 from .llm_client import call_llm
 from .config import Config
 from .personality import Personality
+from gtts import gTTS
+import json
 import pytz
-import pyttsx3
 import csv
 import os
+import re
+# import uuid
+# voice_file = f"response_{uuid.uuid4().hex}.mp3" <== for unique voice file names
 
+
+SONGS_FOLDER = "songs"  # Folder where songs are stored
 
 def calculate_time_difference(last_interaction):
     jakarta_tz = pytz.timezone("Asia/Jakarta")
@@ -32,27 +38,15 @@ def calculate_time_difference(last_interaction):
         return "We just talked a moment ago!"
     
 def generate_voice_response(text, personality_traits=None):
-    """Generate a voice response using pyttsx3 with dynamic adjustments."""
-    engine = pyttsx3.init()
-    voices = engine.getProperty('voices')
-
-    # Set default voice to female
-    for voice in voices:
-        if "female" in voice.name.lower():
-            engine.setProperty('voice', voice.id)
-            break
-
-    # Adjust voice properties based on personality traits
-    if personality_traits:
-        if "calm" in personality_traits or "friendly" in personality_traits:
-            engine.setProperty('rate', 140)  # Slower, calm tone
-        elif "sarcastic" in personality_traits or "edgy" in personality_traits:
-            engine.setProperty('rate', 180)  # Faster, sharper tone
-
-    engine.setProperty('rate', 150)  # Default speaking rate
-    engine.save_to_file(text, 'response.mp3')  # Save to file
-    engine.runAndWait()
-    return 'response.mp3'
+    """Generate a voice response using gTTS."""
+    try:
+        # Generate speech using gTTS
+        tts = gTTS(text=text, lang='en', slow=False)  # Default voice is female
+        voice_file = 'response.mp3'
+        tts.save(voice_file)  # Save the audio file
+        return voice_file
+    except Exception as e:
+        raise RuntimeError(f"Error generating voice response: {str(e)}")
 
 def register_routes(app):
     @app.route("/")
@@ -84,6 +78,32 @@ def register_routes(app):
             return jsonify({"error": "No message provided"}), 400
         
         try:
+            # Detect if the user is asking to play a song
+            song_request_match = re.search(r"play(?: the)? (.+?) song", user_input, re.IGNORECASE)
+            if song_request_match:
+                song_name = song_request_match.group(1).strip()
+                song_path = os.path.join(SONGS_FOLDER, f"{song_name}.mp3")
+
+                if os.path.exists(song_path):
+                    # Generate a voice response announcing the song
+                    announcement = f"Now playing {song_name}."
+                    voice_file = generate_voice_response(announcement)
+
+                    return jsonify({
+                        "response": announcement,
+                        "voice_file": voice_file,
+                        "song_file": song_path
+                    })
+                else:
+                    # Respond if the song is not found
+                    not_found_message = f"Sorry, I couldn't find the song '{song_name}'."
+                    voice_file = generate_voice_response(not_found_message)
+
+                    return jsonify({
+                        "response": not_found_message,
+                        "voice_file": voice_file
+                    })
+
             # Retrieve last interaction time
             last_interaction = LongTermMemory.get_last_interaction_time(user_id)
             time_message = calculate_time_difference(last_interaction)
@@ -151,6 +171,31 @@ def register_routes(app):
 
         except Exception as e:
             app.logger.error(f"Chat error: {str(e)}")
+            return jsonify({"error": "Internal server error", "details": str(e)}), 500
+
+    @app.route("/play_song", methods=["POST"])
+    def play_song():
+        song_name = request.form.get("song_name")
+        if not song_name:
+            return jsonify({"error": "No song name provided"}), 400
+
+        # Check if the song exists in the folder
+        song_path = os.path.join(SONGS_FOLDER, f"{song_name}.mp3")
+        if not os.path.exists(song_path):
+            return jsonify({"error": f"Song '{song_name}' not found"}), 404
+
+        try:
+            # Generate a voice response announcing the song
+            announcement = f"Now playing {song_name}."
+            voice_file = generate_voice_response(announcement)
+
+            # Return the voice file and the song file
+            return jsonify({
+                "announcement_voice_file": voice_file,
+                "song_file": song_path
+            })
+        except Exception as e:
+            app.logger.error(f"Error playing song: {str(e)}")
             return jsonify({"error": "Internal server error", "details": str(e)}), 500
 
     @app.route("/get_conversation")
