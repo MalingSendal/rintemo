@@ -1,6 +1,7 @@
 # RinAI &nbsp; <img src="https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png" height="32" align="right">
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5)
 ![Flask](https://img.shields.io/badge/Flask-Web%20API-lightgrey?logo=flask)
 ![Discord](https://img.shields.io/badge/Discord-Bot-5865F2?logo=discord)
 ![NLP](https://img.shields.io/badge/NLP-SentenceTransformers-green?logo=ai)
