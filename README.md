@@ -22,7 +22,7 @@
 - **🎭 Dynamic Personality:** Evolves traits and quirks based on user interactions and facts.
 - **💬 Web Chat UI:** WhatsApp-inspired chat interface with timestamps and voice playback.
 - **🤖 Discord Bot:** Chat with RinAI directly in your Discord server.
-- **🗣️ Voice Synthesis:** Generates voice responses using TTS (pyttsx3).
+- **🗣️ Voice Synthesis:** Generates voice responses using TTS (gTTS).
 - **⏰ Time Awareness:** Recognizes time since last interaction and adapts responses accordingly.
 - **📚 Fact Extraction:** Learns and stores facts about users from conversations.
 - **🔗 Embedding Memory:** Uses sentence-transformers for semantic memory and context.
@@ -47,6 +47,8 @@
 │   └── index.html           # Web chat UI
 ├── appearance/
 │   └── ...                  # Images and avatars
+├── songs/
+│   └── ...                  # Songs
 ├── discord_bot.py           # Discord bot integration
 ├── main.py                  # App entrypoint
 ├── requirements.txt         # Python dependencies
@@ -77,16 +79,17 @@ pip install -r requirements.txt
 
 ### 3. Set Up Environment
 
-Create a `.env` file with your Discord token:
+Create a `.env` file with your Discord token and DeepSeek API:
 
 ```
+DEEPSEEK_API_KEY=your_API_here
 DISCORD_TOKEN=your_discord_token_here
 ```
 
 ### 4. Run the Web App
 
 ```sh
-python main.py
+python3 main.py
 ```
 
 Visit [http://localhost:5000](http://localhost:5000) to chat with RinAI.
@@ -99,9 +102,9 @@ python discord_bot.py
 
 ---
 
-## 🖼️ Web Chat UI
+## 🖼️ Rin Profile Picture
 
-![Web Chat UI Screenshot](appearance/b1760327720535d495a0f537a0a09547.jpg)
+![Rin Appearance](appearance/Rin.png)
 
 ---
 
