@@ -8,7 +8,7 @@
 
 ---
 
-<img src="appearance/ChatGPT%20Image%20May%2031,%202025,%2010_44_50%20AM.png" width="200" align="right" style="border-radius: 12px; margin-left: 20px;">
+<img src="Appearance/Rin2.png" width="200" align="right" style="border-radius: 12px; margin-left: 20px;">
 
 ## 🌸 RinAI: Your Evolving AI Companion
 
@@ -104,7 +104,7 @@ python discord_bot.py
 
 ## 🖼️ Rin Profile Picture
 
-![Rin Appearance](appearance/Rin.png)
+![Rin Appearance](Appearance/Rin.png)
 
 ---
 
