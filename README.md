@@ -144,7 +144,7 @@ This project is **private** and not licensed for public/commercial use.
 ## 💡 Credits
 
 - Created by Rendy and contributors.
-- Inspired by conversational AI and memory-augmented agents.
+- Inspired by NeuroAI and memory-augmented agents.
 
 ---
 
