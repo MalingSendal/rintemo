@@ -1,4 +1,4 @@
-# RinAI &nbsp; <img src="https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png" height="32" align="right">
+# RinAI &nbsp;
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
 ![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5)
