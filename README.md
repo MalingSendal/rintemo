@@ -131,7 +131,7 @@ python discord_bot.py
 - **Flask** (Web API)
 - **Discord.py** (Discord bot)
 - **sentence-transformers** (Semantic embeddings)
-- **pyttsx3** (Text-to-speech)
+- **gtts** (Text-to-speech)
 - **scikit-learn** (NLP utilities)
 - **dotenv** (Environment variables)
 
