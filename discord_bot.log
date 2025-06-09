@@ -1,4 +1,1469 @@
 nohup: ignoring input
-[2025-06-01 05:33:03] [INFO    ] discord.client: logging in using static token
-[2025-06-01 05:33:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 97540c078166f6e1173c32ea5e6250ab).
-[2025-06-01 06:10:42] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 97540c078166f6e1173c32ea5e6250ab.
+[2025-06-01 15:50:03] [INFO    ] discord.client: logging in using static token
+[2025-06-01 15:50:05] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a9adff9f4471eda850519da48f97d904).
+[2025-06-01 16:07:19] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-01 18:15:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-01 19:25:34] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-01 21:13:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 00:20:42] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 00:52:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 04:02:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 07:47:26] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 10:45:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 12:02:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 13:41:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 14:02:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 14:29:44] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 14:49:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 17:11:39] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/media/myfiles/rintemo/discord_bot.py", line 72, in <module>
+    client.run(DISCORD_TOKEN)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 906, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "/media/myfiles/rintemo/discord_bot.py", line 57, in on_message
+    response = requests.post(FLASK_BACKEND_URL, data={
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+
+[2025-06-02 18:33:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 18:50:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 20:20:54] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 21:51:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-02 23:55:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 00:38:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 01:04:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 04:25:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 04:28:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 05:45:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 06:24:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 08:02:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 09:12:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session a9adff9f4471eda850519da48f97d904.
+[2025-06-03 10:55:00] [ERROR   ] discord.client: Attempting a reconnect in 1.65s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:55:02] [ERROR   ] discord.client: Attempting a reconnect in 0.19s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:55:02] [ERROR   ] discord.client: Attempting a reconnect in 0.65s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:55:03] [ERROR   ] discord.client: Attempting a reconnect in 8.75s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:55:12] [ERROR   ] discord.client: Attempting a reconnect in 16.64s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:55:29] [ERROR   ] discord.client: Attempting a reconnect in 28.23s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:55:57] [ERROR   ] discord.client: Attempting a reconnect in 13.89s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:56:11] [ERROR   ] discord.client: Attempting a reconnect in 102.40s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 10:57:54] [ERROR   ] discord.client: Attempting a reconnect in 185.83s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 11:01:00] [ERROR   ] discord.client: Attempting a reconnect in 697.45s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 11:12:37] [ERROR   ] discord.client: Attempting a reconnect in 686.52s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 11:24:05] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2025-06-03 11:24:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8c5dd9604e7d7ad155d1f1a8fd86988b).
+[2025-06-03 11:25:12] [ERROR   ] discord.client: Attempting a reconnect in 251.91s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-03 11:29:24] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2025-06-03 11:29:30] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7d8bb13e56bb9276cd2833d747eec783).
+[2025-06-03 11:56:38] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 12:26:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 14:58:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 16:19:16] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 16:36:03] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 17:00:19] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 19:06:42] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 20:43:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-03 21:23:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 00:19:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 04:01:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 04:06:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 05:52:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 07:53:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 08:07:17] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 08:20:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 11:14:46] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 12:32:07] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 13:42:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 14:04:09] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/media/myfiles/rintemo/discord_bot.py", line 72, in <module>
+    client.run(DISCORD_TOKEN)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 906, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "/media/myfiles/rintemo/discord_bot.py", line 57, in on_message
+    response = requests.post(FLASK_BACKEND_URL, data={
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+
+[2025-06-04 14:04:14] [ERROR   ] discord.client: Attempting a reconnect in 0.14s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 704, in connect
+    await self.ws.poll_event()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 627, in poll_event
+    await self.received_message(msg.data)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 532, in received_message
+    await self.send_as_json(beat)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 663, in send_as_json
+    await self.send(utils._to_json(data))
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 659, in send
+    await self.socket.send_str(data)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client_ws.py", line 245, in send_str
+    await self._writer.send_frame(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/_websocket/writer.py", line 126, in send_frame
+    raise ClientConnectionResetError("Cannot write to closing transport")
+aiohttp.client_exceptions.ClientConnectionResetError: Cannot write to closing transport
+[2025-06-04 14:04:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 14:43:36] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/media/myfiles/rintemo/discord_bot.py", line 72, in <module>
+    client.run(DISCORD_TOKEN)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 906, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "/media/myfiles/rintemo/discord_bot.py", line 57, in on_message
+    response = requests.post(FLASK_BACKEND_URL, data={
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+
+[2025-06-04 14:43:42] [ERROR   ] discord.client: Attempting a reconnect in 1.27s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 704, in connect
+    await self.ws.poll_event()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 627, in poll_event
+    await self.received_message(msg.data)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 532, in received_message
+    await self.send_as_json(beat)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 663, in send_as_json
+    await self.send(utils._to_json(data))
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 659, in send
+    await self.socket.send_str(data)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client_ws.py", line 245, in send_str
+    await self._writer.send_frame(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/_websocket/writer.py", line 126, in send_frame
+    raise ClientConnectionResetError("Cannot write to closing transport")
+aiohttp.client_exceptions.ClientConnectionResetError: Cannot write to closing transport
+[2025-06-04 14:43:44] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+Unclosed connection
+client_connection: Connection<ConnectionKey(host='gateway-us-east1-c.discord.gg', port=443, is_ssl=True, ssl=True, proxy=None, proxy_auth=None, proxy_headers_hash=None)>
+Unclosed connection
+client_connection: Connection<ConnectionKey(host='gateway-us-east1-c.discord.gg', port=443, is_ssl=True, ssl=True, proxy=None, proxy_auth=None, proxy_headers_hash=None)>
+[2025-06-04 15:13:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 15:45:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 18:17:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 18:32:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-04 21:16:08] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 00:08:33] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 00:36:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 03:15:03] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 03:54:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 07:41:19] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 10:11:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 13:57:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 15:20:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 18:12:00] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 20:11:46] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-05 21:10:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 01:09:23] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 02:30:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 06:22:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 08:27:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 10:28:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 12:23:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 12:47:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 12:58:38] [WARNING ] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/media/myfiles/rintemo/discord_bot.py", line 72, in <module>
+    client.run(DISCORD_TOKEN)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 906, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "/media/myfiles/rintemo/discord_bot.py", line 57, in on_message
+    response = requests.post(FLASK_BACKEND_URL, data={
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+
+[2025-06-06 12:58:46] [ERROR   ] discord.client: Attempting a reconnect in 0.64s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 704, in connect
+    await self.ws.poll_event()
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 627, in poll_event
+    await self.received_message(msg.data)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 532, in received_message
+    await self.send_as_json(beat)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 663, in send_as_json
+    await self.send(utils._to_json(data))
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 659, in send
+    await self.socket.send_str(data)
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client_ws.py", line 245, in send_str
+    await self._writer.send_frame(
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/_websocket/writer.py", line 126, in send_frame
+    raise ClientConnectionResetError("Cannot write to closing transport")
+aiohttp.client_exceptions.ClientConnectionResetError: Cannot write to closing transport
+[2025-06-06 12:58:48] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+Unclosed connection
+client_connection: Connection<ConnectionKey(host='gateway-us-east1-c.discord.gg', port=443, is_ssl=True, ssl=True, proxy=None, proxy_auth=None, proxy_headers_hash=None)>
+[2025-06-06 13:20:31] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 14:47:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 15:57:31] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 18:25:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 19:46:11] [ERROR   ] discord.client: Attempting a reconnect in 0.94s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-06 19:46:13] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 19:55:06] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-06 22:48:16] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-07 01:43:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-07 02:02:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 7d8bb13e56bb9276cd2833d747eec783.
+[2025-06-07 04:06:16] [ERROR   ] discord.client: Attempting a reconnect in 0.09s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-07 04:06:17] [ERROR   ] discord.client: Attempting a reconnect in 3.64s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-07 04:06:20] [ERROR   ] discord.client: Attempting a reconnect in 2.13s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-07 04:06:23] [ERROR   ] discord.client: Attempting a reconnect in 13.40s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-07 04:06:46] [ERROR   ] discord.client: Attempting a reconnect in 22.59s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-07 04:07:19] [ERROR   ] discord.client: Attempting a reconnect in 54.56s
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1376, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1013, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1044, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/resolver.py", line 40, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 901, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 1048, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 760, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/client.py", line 715, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 561, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1074, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/myfiles/rintemo/myenv/lib/python3.12/site-packages/aiohttp/connector.py", line 1382, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [Temporary failure in name resolution]
+[2025-06-07 04:08:14] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2025-06-07 04:08:20] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ed49af68b1a4dd4a1c6ab14952a60b9c).
+[2025-06-07 05:32:53] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 05:34:54] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 06:49:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 07:17:18] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 09:55:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 10:31:20] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 11:31:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 11:49:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 12:05:46] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 13:33:34] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 17:12:45] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 17:34:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 20:30:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 21:00:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 21:38:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-07 23:17:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 02:15:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 05:48:54] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 08:09:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 09:53:19] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 13:17:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 16:04:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 18:20:00] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-08 20:57:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 00:57:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 01:32:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 04:56:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 07:59:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 10:59:52] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 12:21:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 14:10:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.
+[2025-06-09 14:42:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session ed49af68b1a4dd4a1c6ab14952a60b9c.

@@ -37,13 +37,15 @@ def calculate_time_difference(last_interaction):
     else:
         return "We just talked a moment ago!"
     
-def generate_voice_response(text, personality_traits=None):
-    """Generate a voice response using gTTS."""
+def generate_voice_response(text, personality_traits=None, voice_name=None):
+    """
+    Generate a voice response using gTTS (Google Text-to-Speech).
+    gTTS uses a female voice by default.
+    """
     try:
-        # Generate speech using gTTS
-        tts = gTTS(text=text, lang='en', slow=False)  # Default voice is female
-        voice_file = 'response.mp3'
-        tts.save(voice_file)  # Save the audio file
+        tts = gTTS(text=text, lang="en")  # 'en' for English, change if needed
+        voice_file = "response.mp3"
+        tts.save(voice_file)
         return voice_file
     except Exception as e:
         raise RuntimeError(f"Error generating voice response: {str(e)}")
